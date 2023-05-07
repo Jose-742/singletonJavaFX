@@ -1,0 +1,13 @@
+# Padrões de Projeto - Singleton
+
+O padrão Singleton é um dos padrões de projeto mais simples e amplamente utilizados na programação orientada a objetos. Ele é classificado como um padrão de criação, pois fornece uma maneira de criar uma única instância de uma classe, garantindo que essa instância seja acessada globalmente por todo o sistema.
+
+O objetivo principal do padrão Singleton é restringir a criação de múltiplas instâncias de uma classe e garantir que haja apenas uma instância disponível em tempo de execução. Isso pode ser útil em situações em que uma única instância de uma classe é necessária para coordenar ações em todo o sistema, como em casos de acesso a um banco de dados, registros de log, configurações globais, entre outros.
+
+A implementação típica do padrão Singleton envolve uma classe com um construtor privado, o que impede que outras classes instanciem diretamente essa classe. A classe Singleton também possui um método estático, geralmente chamado de getInstance(), que retorna a única instância da classe. O método getInstance() verifica se uma instância já foi criada e, se sim, retorna essa instância existente. Caso contrário, ele cria uma nova instância e a retorna.
+
+Uma consideração importante ao implementar o padrão Singleton é a garantia de que a instância seja realmente única. Isso pode ser alcançado usando técnicas de sincronização para controlar o acesso concorrente ao método getInstance(). Além disso, é possível aplicar outras abordagens, como inicialização preguiçosa (lazy initialization) ou inicialização estática, dependendo dos requisitos do sistema e do ambiente de execução.
+
+Embora o padrão Singleton possa fornecer um ponto de acesso global conveniente para uma instância única, ele também apresenta desvantagens potenciais. O acoplamento forte entre as classes que usam a instância Singleton pode dificultar a realização de testes unitários. Além disso, o Singleton pode se tornar um ponto central de falhas e gargalos no sistema, pois ele é compartilhado por várias partes do código.
+
+Portanto, ao utilizar o padrão Singleton, é essencial considerar cuidadosamente as necessidades do sistema e as implicações do seu uso. Embora seja amplamente utilizado, é importante pesar os benefícios e os possíveis efeitos colaterais em relação à simplicidade e ao gerenciamento da instância única.
